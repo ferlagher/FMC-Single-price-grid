@@ -1,0 +1,35 @@
+body {
+    font-family: $ft-fy;
+}
+
+h1 {
+    @include font($ft-wt-bold, $ft-sz-h1, $clr-cyan);
+}
+
+h2 {
+    @include font($ft-wt-bold, $ft-sz-h2, $clr-yellow);
+}
+
+h3 {
+    @include font($ft-wt-bold, $ft-sz-h3, $clr-white);
+}
+
+p {
+    @include font($ft-wt-regular, $ft-sz-body, $clr-gray);
+}
+
+b {
+    @include font($ft-wt-bold, $ft-sz-b, $clr-white);
+}
+
+span {
+    @include font($ft-wt-regular, $ft-sz-body, $clr-gray);
+}
+
+a {
+    color: $clr-yellow;
+    text-decoration: none;
+    &:visited {
+        color: $clr-yellow;
+    }
+}

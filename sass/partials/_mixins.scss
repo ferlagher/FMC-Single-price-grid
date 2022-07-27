@@ -1,0 +1,5 @@
+@mixin font($wt, $sz, $clr) {
+    font-weight: $wt;
+    font-size: $sz;
+    color: $clr;
+}

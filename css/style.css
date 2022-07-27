@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  font-family: "Karla", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: hsl(179deg, 62%, 43%);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: hsl(71deg, 73%, 54%);
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  color: hsl(204deg, 43%, 93%);
+}
+
+b {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+span {
+  font-weight: 400;
+  font-size: 1rem;
+  color: hsl(204deg, 43%, 93%);
+}
+
+a {
+  color: hsl(71deg, 73%, 54%);
+  text-decoration: none;
+}
+a:visited {
+  color: hsl(71deg, 73%, 54%);
+}/*# sourceMappingURL=style.css.map */
