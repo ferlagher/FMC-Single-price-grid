@@ -3,26 +3,26 @@ body {
 }
 
 h1 {
-    @include font($ft-wt-bold, $ft-sz-h1, $clr-cyan);
+    @include font($ft-wt-bold, $ft-sz-lg, $clr-cyan);
     margin-bottom: 1em;
 }
 
 h2 {
-    @include font($ft-wt-bold, $ft-sz-h2, $clr-white);
-    margin-bottom: 0.75em;
+    @include font($ft-wt-bold, $ft-sz-md, $clr-white);
+    margin-bottom: 0.85em;
 }
 
 p {
-    @include font($ft-wt-regular, $ft-sz-body, $clr-gray);
-    line-height: 1.25em;
+    @include font($ft-wt-regular, $ft-sz-xs, $clr-gray);
+    line-height: 1.75em;
 }
 
 b {
-    @include font($ft-wt-bold, $ft-sz-b, $clr-white);
+    @include font($ft-wt-bold, $ft-sz-32, $clr-white);
 }
 
 span {
-    @include font($ft-wt-regular, $ft-sz-body, $clr-gray);
+    @include font($ft-wt-regular, $ft-sz-16, $clr-gray);
     opacity: 0.75;
     vertical-align: top;
     padding-left: 1em;
@@ -39,16 +39,28 @@ a {
 .card {
     &__header {
         h2 {
+            font-size: $ft-sz-sm;
             color: $clr-yellow;
         }
         p {
         color: $clr-blue;
-        line-height: 1.75em;
         }
     }
     &__left {
-        p {
-            margin: 0.5em 0;
+        p{
+            font-size: $ft-sz-16;
         }
+    }
+    &__right {
+        p {
+            font-size: $ft-sz-14;
+            line-height: 1.5em;
+        }
+    }
+}
+
+footer {
+    p {
+        color: $clr-blue;
     }
 }

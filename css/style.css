@@ -12,27 +12,27 @@ h1 {
 
 h2 {
   font-weight: 700;
-  font-size: clamp(0.9375rem, 1.25vw, 1.125rem);
+  font-size: clamp(1.125rem, 1.25vw, 1.125rem);
   color: #fff;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.85em;
 }
 
 p {
   font-weight: 400;
   font-size: clamp(0.875rem, 1.11vw, 1rem);
   color: hsl(204deg, 43%, 93%);
-  line-height: 1.25em;
+  line-height: 1.75em;
 }
 
 b {
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: #fff;
 }
 
 span {
   font-weight: 400;
-  font-size: clamp(0.875rem, 1.11vw, 1rem);
+  font-size: 1rem;
   color: hsl(204deg, 43%, 93%);
   opacity: 0.75;
   vertical-align: top;
@@ -48,14 +48,22 @@ a:visited {
 }
 
 .card__header h2 {
+  font-size: clamp(0.9375rem, 1.25vw, 1.125rem);
   color: hsl(71deg, 73%, 54%);
 }
 .card__header p {
   color: hsl(218deg, 22%, 67%);
-  line-height: 1.75em;
 }
 .card__left p {
-  margin: 0.5em 0;
+  font-size: 1rem;
+}
+.card__right p {
+  font-size: 0.875rem;
+  line-height: 1.5em;
+}
+
+footer p {
+  color: hsl(218deg, 22%, 67%);
 }
 
 * {
@@ -64,6 +72,60 @@ a:visited {
   box-sizing: border-box;
 }
 
+button {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  padding: 1em;
+  background-color: hsl(71deg, 73%, 54%);
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 10px 20px hsla(214deg, 22%, 33%, 0.25);
+  margin-top: 1.25em;
+  transition: 0.3s ease-in-out;
+}
+button::after {
+  content: "";
+  position: absolute;
+  left: -20%;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background-color: #fff;
+  animation: shine 10s ease-out infinite;
+}
+button:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 10px 0 -4px rgba(192, 223, 52, 0.3764705882), 0 20px 0 -8px rgba(192, 223, 52, 0.3764705882), 0 16px 10px rgba(192, 223, 52, 0.3764705882);
+}
+button:active {
+  transition: all 0.2s;
+  transform: translateY(-5px);
+  box-shadow: 0 2px 0 -2px rgba(192, 223, 52, 0.3764705882), 0 8px 0 -4px rgba(192, 223, 52, 0.3764705882), 0 12px 10px -3px rgba(192, 223, 52, 0.3764705882);
+}
+
+@keyframes shine {
+  0% {
+    transform: scale(0) skewX(-20deg);
+    opacity: 0;
+  }
+  89% {
+    transform: scale(0) skewX(-20deg);
+    opacity: 0.5;
+  }
+  90% {
+    transform: scale(1) skewX(-20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(80) skewX(-20deg);
+    opacity: 0;
+  }
+}
 body {
   background-color: hsl(204deg, 43%, 93%);
   min-height: 100vh;
@@ -78,8 +140,8 @@ body main {
 body main .card {
   background-color: #fff;
   width: clamp(min(100%, 19.4375rem), 44.1vw, 39.6875rem);
-  border-radius: 6px;
-  box-shadow: 0 15px 25px hsla(217deg, 22%, 67%, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 10px 20px hsla(214deg, 22%, 33%, 0.25);
   margin: min(8.5vw, 32px);
   overflow: hidden;
   display: grid;
@@ -97,15 +159,21 @@ body main .card__left {
   flex-direction: column;
   justify-content: space-between;
 }
+body main .card__left div {
+  margin: 0.5em 0;
+}
 body main .card__right {
   background-color: hsl(179deg, 62%, 43%);
-  opacity: 0.8;
+  opacity: 0.9;
   padding: clamp(25px, 2.8vw, 40px);
+}
+body footer {
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .card {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, fit-content);
   }
   .card__left {
     grid-column-start: span 2;

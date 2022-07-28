@@ -1,0 +1,44 @@
+button {
+    font-family: $ft-fy;
+    @include font($ft-wt-bold, $ft-sz-16, $clr-white);
+    padding: 1em;
+    background-color: $clr-yellow;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: $sdw-box;
+    margin-top: 1.25em;
+    transition: 0.3s ease-in-out;
+    &::after {
+        content:'';
+        position: absolute;
+        left: -20%;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        background-color: $clr-white;
+        animation: shine 10s ease-out infinite;
+    }
+    &:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 10px 0 -4px #c0df3460,
+            0 20px 0 -8px #c0df3460,
+            0 16px 10px #c0df3460;
+    }
+    &:active {
+        transition: all 0.2s;
+        transform: translateY(-5px);
+        box-shadow: 0 2px 0 -2px #c0df3460,
+            0 8px 0 -4px #c0df3460,
+            0 12px 10px -3px #c0df3460;
+    }
+}
+
+@keyframes shine{
+    0% {transform: scale(0) skewX(-20deg); opacity: 0; }
+    89% {transform: scale(0) skewX(-20deg); opacity: 0.5; }
+    90% {transform: scale(1) skewX(-20deg); opacity: 1; }
+    100% {transform: scale(80) skewX(-20deg); opacity: 0; }
+}

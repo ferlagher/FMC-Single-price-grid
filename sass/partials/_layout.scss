@@ -1,5 +1,6 @@
 body {
-    background-color: $clr-gray;min-height: 100vh;
+    background-color: $clr-gray;
+    min-height: 100vh;
     display: grid;
     grid-template-rows: auto min-content;
     main {
@@ -9,7 +10,7 @@ body {
         .card {
             background-color: $clr-white;
             width: $wdt-card;
-            border-radius: 6px;
+            border-radius: 8px;
             box-shadow: $sdw-box;
             margin: $mar;
             overflow: hidden;
@@ -26,19 +27,25 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                div {
+                    margin: 0.5em 0;
+                }
             }
             &__right {
                 background-color: $clr-cyan;
-                opacity: 0.8;
+                opacity: 0.9;
                 padding: $pad;
             }
         }
+    }
+    footer {
+        text-align: center;
     }
 }
 
 @media (max-width: 768px) {
     .card {
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, fit-content);
         &__left {
             grid-column-start: span 2;
         }
