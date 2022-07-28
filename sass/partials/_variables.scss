@@ -5,14 +5,21 @@ $clr-yellow: hsl(71, 73%, 54%);
 $clr-blue: hsl(218, 22%, 67%);
 $clr-gray: hsl(204, 43%, 93%);
 $clr-white: #fff;
+$clr-shadow: hsla(217, 22%, 67%, 0.5);
 
 $ft-fy: 'Karla', sans-serif;
 
 $ft-wt-bold: 700;
 $ft-wt-regular: 400;
 
-$ft-sz-h1: 2rem;
-$ft-sz-h2: 1.5rem;
-$ft-sz-h3: 1.5rem;
-$ft-sz-body: 1rem;
-$ft-sz-b: 2.5rem;
+$ft-sz-h1: clamp(calc(19rem / 16), 1.53vw, calc(22rem / 16));
+$ft-sz-h2: clamp(calc(15rem / 16), 1.25vw, calc(18rem / 16));
+$ft-sz-body: clamp(calc(14rem / 16), 1.11vw, 1rem);
+$ft-sz-b: calc(28rem / 16);
+
+$pad: clamp(25px, 2.8vw, 40px);
+$mar: min(8.5vw, 32px);
+
+$wdt-card: clamp(min(100%, calc(311rem / 16)), 44.1vw, calc(635rem / 16));
+
+$sdw-box: 0 15px 25px $clr-shadow;

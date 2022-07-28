@@ -5,38 +5,38 @@ body {
 
 h1 {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: clamp(1.1875rem, 1.53vw, 1.375rem);
   color: hsl(179deg, 62%, 43%);
+  margin-bottom: 1em;
 }
 
 h2 {
   font-weight: 700;
-  font-size: 1.5rem;
-  color: hsl(71deg, 73%, 54%);
-}
-
-h3 {
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(0.9375rem, 1.25vw, 1.125rem);
   color: #fff;
+  margin-bottom: 0.75em;
 }
 
 p {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 1.11vw, 1rem);
   color: hsl(204deg, 43%, 93%);
+  line-height: 1.25em;
 }
 
 b {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   color: #fff;
 }
 
 span {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 1.11vw, 1rem);
   color: hsl(204deg, 43%, 93%);
+  opacity: 0.75;
+  vertical-align: top;
+  padding-left: 1em;
 }
 
 a {
@@ -45,4 +45,72 @@ a {
 }
 a:visited {
   color: hsl(71deg, 73%, 54%);
+}
+
+.card__header h2 {
+  color: hsl(71deg, 73%, 54%);
+}
+.card__header p {
+  color: hsl(218deg, 22%, 67%);
+  line-height: 1.75em;
+}
+.card__left p {
+  margin: 0.5em 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(204deg, 43%, 93%);
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto min-content;
+}
+body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .card {
+  background-color: #fff;
+  width: clamp(min(100%, 19.4375rem), 44.1vw, 39.6875rem);
+  border-radius: 6px;
+  box-shadow: 0 15px 25px hsla(217deg, 22%, 67%, 0.5);
+  margin: min(8.5vw, 32px);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, fit-content);
+}
+body main .card__header {
+  grid-column-start: span 2;
+  padding: clamp(25px, 2.8vw, 40px);
+}
+body main .card__left {
+  background-color: hsl(179deg, 62%, 43%);
+  padding: clamp(25px, 2.8vw, 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main .card__right {
+  background-color: hsl(179deg, 62%, 43%);
+  opacity: 0.8;
+  padding: clamp(25px, 2.8vw, 40px);
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .card__left {
+    grid-column-start: span 2;
+  }
+  .card__right {
+    grid-column-start: span 2;
+  }
 }/*# sourceMappingURL=style.css.map */

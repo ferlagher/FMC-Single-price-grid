@@ -4,18 +4,17 @@ body {
 
 h1 {
     @include font($ft-wt-bold, $ft-sz-h1, $clr-cyan);
+    margin-bottom: 1em;
 }
 
 h2 {
-    @include font($ft-wt-bold, $ft-sz-h2, $clr-yellow);
-}
-
-h3 {
-    @include font($ft-wt-bold, $ft-sz-h3, $clr-white);
+    @include font($ft-wt-bold, $ft-sz-h2, $clr-white);
+    margin-bottom: 0.75em;
 }
 
 p {
     @include font($ft-wt-regular, $ft-sz-body, $clr-gray);
+    line-height: 1.25em;
 }
 
 b {
@@ -24,6 +23,9 @@ b {
 
 span {
     @include font($ft-wt-regular, $ft-sz-body, $clr-gray);
+    opacity: 0.75;
+    vertical-align: top;
+    padding-left: 1em;
 }
 
 a {
@@ -31,5 +33,22 @@ a {
     text-decoration: none;
     &:visited {
         color: $clr-yellow;
+    }
+}
+
+.card {
+    &__header {
+        h2 {
+            color: $clr-yellow;
+        }
+        p {
+        color: $clr-blue;
+        line-height: 1.75em;
+        }
+    }
+    &__left {
+        p {
+            margin: 0.5em 0;
+        }
     }
 }
