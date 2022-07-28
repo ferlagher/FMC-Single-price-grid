@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/responsive-component-using-grid-and-flexbox-small-animation-dWzvFeuzyR
 - Live Site URL: https://ferlagher.github.io/FMC-Single-price-grid
 
 ## My process
